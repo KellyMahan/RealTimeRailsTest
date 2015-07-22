@@ -1,0 +1,18 @@
+%h1 Listing posts
+
+%table
+  %thead
+    %tr
+      %th Content
+      %th Subject
+      %th
+      %th
+      %th
+
+  %tbody
+    - @posts.each do |post|
+      =render_real_time partial: "posts/post", real_time: {post: post}, element: "tr"
+
+%br
+
+= link_to 'New Post', new_post_path
