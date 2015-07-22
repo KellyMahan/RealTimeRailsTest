@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', github: 'rails/rails'
 gem 'arel', github: 'rails/arel'
 gem 'actioncable', github: 'rails/actioncable'
-gem 'real_time_rails', path: "/Users/kelly/Rails/RealTimeRails", :require => 'real_time_rails'
+gem 'real_time_rails', github: 'Kellymahan/RealTimeRails', :require => 'real_time_rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
