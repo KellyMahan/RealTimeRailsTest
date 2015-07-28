@@ -1,12 +1,3 @@
 %p#notice= notice
 
-%p
-  %b Content:
-  = @post.content
-%p
-  %b Subject:
-  = @post.subject
-
-= link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path
+=render_real_time partial: "posts/post", real_time: {post: @post}

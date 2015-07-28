@@ -9,9 +9,7 @@
       %th
       %th
 
-  %tbody
-    - @posts.each do |post|
-      =render_real_time partial: "posts/post", real_time: {post: post}, element: "tr"
+  =render_real_time partial: "posts/posts_list", real_time: {posts: @posts}, element: :tbody
 
 %br
 

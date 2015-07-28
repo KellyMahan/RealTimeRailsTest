@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/KellyMahan/RealTimeRails.git
+  revision: 61727089395e10670086c87901aeb4fb91013b0d
+  specs:
+    real_time_rails (0.1.0)
+      actioncable
+      puma
+
+GIT
   remote: git://github.com/rails/actioncable.git
   revision: 6ee8bb9310f78de85e6b89c8cac33493b0582383
   specs:
@@ -75,13 +83,6 @@ GIT
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-
-PATH
-  remote: /Users/kelly/Rails/RealTimeRails
-  specs:
-    real_time_rails (0.1.0)
-      actioncable
-      puma
 
 GEM
   remote: https://rubygems.org/

@@ -10,12 +10,17 @@ class RealTimeRailsController < ActionController::Base
     model = websocket_options[:model]
   
     data = case model[:type]
-    when :single
-      eval(model[:name]).find(model[:id])
+    when :single, "update"
+      case params[:rtr_action]
+      when "update"
+        eval(model[:name]).find(model[:id]) rescue nil
+      when "destroy"
+        eval(model[:name]).new
+      end
     when :array
       eval(model[:name]).where(id: model[:ids]).to_a
     when :relation
-      eval(model[:name]).connection.execute(model[:sql])
+      eval(model[:name]).find_by_sql(model[:sql].gsub(/\\/,""))
     end
     locals = render_options[:locals].merge(model[:key] => data)
   
